@@ -1,0 +1,67 @@
+.btn {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.bx-menu {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* O overlay (background) */
+.overlay {
+    /* A altura (height) e a largura (width) depende do quanto você quer revelar o overlay */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1; /* Para ficar no topo, em primeiro */
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden; /* Desabilita o horizontal scroll */
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% do topo */
+    width: 100%;
+    text-align: center; /* Deixa no centro os textos/links */
+    margin-top: 30px;
+}
+
+.overlay-content a:hover {
+    color: #fbfbfb;
+}
+
+/* Os links de navegação dentro da sobreposição */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Ficar em bloco e em INLINE */
+    transition: 0.3s;
+}
+
+.overlay:hover, .overlay:focus {
+    color: #f1f1f1;
+}
+
+/* Posição do botao de fechar (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px;}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
